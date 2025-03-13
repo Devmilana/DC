@@ -2,7 +2,8 @@
 
 Part of my Software Engineering degree at Curtin University Colombo in 2024.
 
-This unit focused on **developing distributed networking applications** using **C# and Visual Studio**. My final mark was **92**.
+This unit focused on **developing distributed networking applications** using **C# and Visual Studio**. 
+My final mark was **92%**.
 
 ---
 
