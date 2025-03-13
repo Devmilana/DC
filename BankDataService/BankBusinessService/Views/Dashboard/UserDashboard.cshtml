@@ -1,0 +1,97 @@
+﻿
+<div class="container">
+    <!-- Header with Dashboard Title and Logout Button -->
+    <header class="header">
+        <h1>Welcome to Your Dashboard</h1>
+        <button id="logoutButton" onclick="loadView('logout')">Logout</button>
+    </header>
+
+    <!-- Section 1: Personal Information -->
+    <section id="personalInfoSection">
+        <h2>Personal Information</h2>
+        <img id="profilePicture" alt="Profile Picture">
+        <form id="personalInfoForm" onsubmit="updateUserProfile(event)">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <button type="submit">Update Personal Details</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Section 2: Account Details and Transaction History -->
+    <section id="accountSection">
+        <h2>Account Information</h2>
+        <p><strong>Account Number:</strong> <span id="accountNumber">Loading...</span></p>
+        <p><strong>Current Balance:</strong> <span id="accountBalance">Loading...</span></p>
+
+        <h3>Transaction History</h3>
+        <!-- Transaction Filter -->
+        <div class="form-group">
+            <label for="filterDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+            <button type="button" onclick="filterTransactions(0)">Filter</button>
+        </div>
+
+        <!-- Transaction Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="transactionHistory">
+                <!-- Transaction data will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Money Transfer -->
+    <section id="transferSection">
+        <h2>Money Transfer</h2>
+        <form id="transferForm" onsubmit="doTransactions(event)">
+            <div class="form-group">
+                <label for="recipientAccount">Recipient's Account Number:</label>
+                <input type="text" id="recipientAccount" name="recipientAccount">
+            </div>
+            <div class="form-group">
+                <label for="transferAmount">Amount to Transfer:</label>
+                <input type="number" id="transferAmount" name="transferAmount">
+            </div>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="transactionType" value="Deposit" checked> Deposit
+                </label>
+                <label>
+                    <input type="radio" name="transactionType" value="Withdrawal"> Withdrawal
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Initiate Transfer</button>
+            </div>
+        </form>
+    </section>
+</div>

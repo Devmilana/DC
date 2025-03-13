@@ -1,0 +1,150 @@
+﻿
+<div class="container">
+    <!-- Header with Dashboard Title and Logout Button -->
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <button id="logoutButton" onclick="loadView('logout')">Logout</button>
+    </header>
+
+    <!-- Section 1: Admin Personal Information -->
+    <section class="section" id="personalInfoSection">
+        <h2>Admin Personal Information</h2>
+        <img id="adminPicture" alt="Profile Picture">
+        <form id="personalInfoForm" onsubmit="updateAdminProfile(event)">
+            <div class="form-group">
+                <label for="adminName">Full Name:</label>
+                <input type="text" id="adminName" name="fullName">
+            </div>
+            <div class="form-group">
+                <label for="adminEmail">Email:</label>
+                <input type="email" id="adminEmail" name="email">
+            </div>
+            <div class="form-group">
+                <label for="adminPhone">Phone Number:</label>
+                <input type="text" id="adminPhone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="adminAddress">Address:</label>
+                <input type="text" id="adminAddress" name="address">
+            </div>
+            <div class="form-group">
+                <label for="adminPassword">Password:</label>
+                <input type="text" id="adminPassword" name="password">
+            </div>
+            <div class="form-group">
+                <button type="submit">Update Personal Details</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Section 2: User Management -->
+    <section class="section" id="userManagementSection">
+        <h2>User Management</h2>
+        <div class="search-bar">
+            <input type="text" id="userSearch" placeholder="Search by name, account number...">
+            <button onclick="searchUsers()">Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Account Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- User data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Edit a chosen user's information -->
+    <div class="popup" id="userEditSection">
+        <h2>Edit User</h2>
+        <form id="editUserForm" onsubmit="editProfile(event)">
+            <div class="form-group">
+                <label for="editName">Full Name:</label>
+                <input type="text" id="editName" name="fullName">
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email">
+            </div>
+            <div class="form-group">
+                <label for="editPhone">Phone Number:</label>
+                <input type="text" id="editPhone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="editAddress">Address:</label>
+                <input type="text" id="editAddress" name="address">
+            </div>
+            <div class="form-group">
+                <button type="submit">Save User Details</button>
+            </div>
+        </form>
+        <button type="button" onclick="closeEditUser()">Close Edit User</button>
+    </div>
+
+    <!-- Section 4: Create New Account -->
+    <div class="section" id="createAccountSection">
+        <h2>Create New Account</h2>
+        <form id="createAccountForm" onsubmit="createNewAccount(event)">
+            <div class="form-group">
+                <label for="newFullName">Full Name:</label>
+                <input type="text" id="newFullName" name="newFullName" required>
+            </div>
+            <div class="form-group">
+                <label for="newEmail">Email:</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="newPhone">Phone Number:</label>
+                <input type="text" id="newPhone" name="newPhone" required>
+            </div>
+            <div class="form-group">
+                <label for="newAddress">Address:</label>
+                <input type="text" id="newAddress" name="newAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Section 5: Transaction History -->
+    <section class="section" id="transactionHistorySection">
+        <h2>Transaction History</h2>
+        <div class="search-bar">
+            <input type="text" id="transactionSearch" placeholder="Search by user name or account number...">
+            <button onclick="searchTransactions()">Search</button>
+        </div>
+        <div class="form-group">
+            <label for="filterDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+            <button type="button" onclick="filterTransactions(2)">Filter</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Account Number</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="transactionHistory">
+                <!-- Transaction data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+</div>

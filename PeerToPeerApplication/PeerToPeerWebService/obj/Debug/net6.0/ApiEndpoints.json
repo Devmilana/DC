@@ -1,0 +1,124 @@
+[
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "GetClientById",
+    "RelativePath": "api/Clients/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "Deregister",
+    "RelativePath": "api/Clients/Deregister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PeerToPeerWebService.Models.Requests.DeregisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "Heartbeat",
+    "RelativePath": "api/Clients/Heartbeat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PeerToPeerWebService.Models.Requests.HeartbeatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "JobComplete",
+    "RelativePath": "api/Clients/JobComplete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PeerToPeerWebService.Models.Requests.JobCompleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "List",
+    "RelativePath": "api/Clients/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "Register",
+    "RelativePath": "api/Clients/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PeerToPeerWebService.Models.Requests.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "SearchByIPAddress",
+    "RelativePath": "api/Clients/SearchByIP/{ipAddress}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ipAddress",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeerToPeerWebService.Controllers.ClientsController",
+    "Method": "SearchByPort",
+    "RelativePath": "api/Clients/SearchByPort/{port}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "port",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PeerToPeerWebService.Models.Client>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            word-break: break-all;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        setTimeout(function () {
+            window.location.reload();
+        }, 60000); // 60,000 milliseconds = 1 minute
+    </script>
+</head>
+<body>
+    <h1>Client Dashboard</h1>
+    <p>This page refreshes every minute.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>IP Address</th>
+                <th>Port</th>
+                <th>Jobs Completed</th>
+                <th>Last Updated (UTC)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in Model)
+            {
+                <tr>
+                    <td>@client.Id</td>
+                    <td>@client.IPAddress</td>
+                    <td>@client.Port</td>
+                    <td>@client.JobsCompleted</td>
+                    <td>@client.LastUpdated.ToString("u")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿
+
+<!-- Tab Buttons for User and Admin Login -->
+<div class="tab-buttons">
+    <button id="userTab" class="active" onclick="showTab('user')">User Login</button>
+    <button id="adminTab" onclick="showTab('admin')">Admin Login</button>
+</div>
+
+<!-- User Login Form -->
+<div id="userLogin" class="tab-content active">
+    <h2>User Login</h2>
+    <form id="userForm" action="/Dashboard/" method="POST">
+        <div class="form-group">
+            <label for="userUsername">Username:</label>
+            <input type="text" id="userUsername" name="userUsername" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="userPassword">Password:</label>
+            <input type="password" id="userPassword" name="userPassword" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="handleLogin('userview')">Login as User</button>
+        </div>
+    </form>
+</div>
+
+<!-- Admin Login Form -->
+<div id="adminLogin" class="tab-content">
+    <h2>Admin Login</h2>
+    <form id="adminForm" action="/Dashboard/" method="POST">
+        <div class="form-group">
+            <label for="adminUsername">Username:</label>
+            <input type="text" id="adminUsername" name="adminUsername" placeholder="Enter admin username" required>
+        </div>
+        <div class="form-group">
+            <label for="adminPassword">Password:</label>
+            <input type="password" id="adminPassword" name="adminPassword" placeholder="Enter admin password" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="handleLogin('adminview')">Login as Admin</button>
+        </div>
+    </form>
+</div>
