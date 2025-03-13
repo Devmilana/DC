@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="GameLobbyClient.LobbyRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameLobbyClient"
+        mc:Ignorable="d"
+        Background="Black"
+        Height="720" Width="1280">
+    <Grid ClipToBounds="True">
+        <Image Source="pack://application:,,,/Images/lobby.jpg"
+               Stretch="UniformToFill" 
+               Panel.ZIndex="0" 
+               Opacity="1" Margin="-58,-14,-58,0"/>
+
+        <Button Content="LEAVE ROOM" HorizontalAlignment="Left" Margin="912,19,0,0" VerticalAlignment="Top" Click="ExitRoomButton_Click" Width="158" Height="39" FontFamily="Consolas" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="RoomTitle" Background="AntiqueWhite" HorizontalAlignment="Left" Margin="1087,19,0,0" VerticalAlignment="Top" Height="39" Width="157" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Label HorizontalAlignment="Left" Margin="1087,89,0,0" VerticalAlignment="Top" Height="34" Width="157" Content="PLAYERS IN LOBBY" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
+        <ListBox x:Name="PlayersListBox" HorizontalAlignment="Left" Height="172" Margin="1087,123,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="PlayersListBox_SelectionChanged" FontFamily="Consolas" FontWeight="Bold" FontSize="16" Background="#FFC8BFCE" />
+
+        <Label HorizontalAlignment="Left" Margin="41,38,0,0" VerticalAlignment="Top" Height="40" Width="170" Content="LOBBY CHAT" FontFamily="Consolas" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center" Foreground="White"/>
+        <ListBox x:Name="GroupChatListBox" HorizontalAlignment="Left" Height="500" Margin="41,82,0,0" VerticalAlignment="Top" Width="282" FontFamily="Consolas" FontWeight="Bold" FontSize="14" Background="#FFC8BFCE" />
+
+        <Label HorizontalAlignment="Left" Margin="1087,0,0,0" VerticalAlignment="Center" Height="40" Width="157" Content="DIRECT MESSAGES" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="White"/>
+        <ListBox x:Name="DMListBox" HorizontalAlignment="Left" Height="70" Margin="956,380,0,0" VerticalAlignment="Top" Width="288" FontFamily="Consolas" FontWeight="Bold" FontSize="14" Background="#FFC8BFCE" />
+
+        <Label HorizontalAlignment="Left" Margin="1087,541,0,0" VerticalAlignment="Top" Height="31" Width="157" Content="FILES SHARED" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Consolas" FontSize="16" Foreground="White"/>
+        <ListBox x:Name="FileSharingListBox" HorizontalAlignment="Left" Height="80" Margin="955,572,0,0" VerticalAlignment="Top" Width="289" FontFamily="Consolas" FontWeight="Bold" FontSize="14" Background="#FFC8BFCE" />
+        <Button x:Name="ShareFileButton" Content="SHARE FILE" HorizontalAlignment="Left" Margin="1138,657,0,0" VerticalAlignment="Top" Click="ShareFileButton_Click" Width="106" Height="40" FontFamily="Consolas" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="DeleteFileButton" Content="DELETE FILE" HorizontalAlignment="Left" Margin="916,657,0,0" VerticalAlignment="Top" Height="40" Width="106" FontFamily="Consolas" FontWeight="Bold" FontSize="16" Click="DeleteFileButton_Click"/>
+        <Button x:Name="CloseFileButton" Visibility="Hidden" Content="CLOSE FILE" HorizontalAlignment="Left" Margin="805,657,0,0" VerticalAlignment="Top" Width="106" Click="CloseFileButton_Click" Height="40" FontFamily="Consolas" FontWeight="Bold" FontSize="16"/>
+
+        <TextBox x:Name="GroupChatText" HorizontalAlignment="Left" Height="52" Margin="41,587,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontFamily="Consolas" FontWeight="Bold" FontSize="14" Background="#FFC8BFCE"/>
+        <Button x:Name="GCSendButton" Content="POST" HorizontalAlignment="Left" Height="44" Margin="41,644,0,0" VerticalAlignment="Top" Width="282" Click="GCSendButton_Click" FontFamily="Consolas" FontWeight="Bold" FontSize="20"/>
+
+        <TextBox x:Name="DMText" HorizontalAlignment="Left" Height="51" Margin="956,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" FontFamily="Consolas" FontWeight="Bold" FontSize="14" Background="#FFC8BFCE"/>
+        <Button x:Name="DMSendButton" Content="SEND" HorizontalAlignment="Left" Height="51" Margin="1170,455,0,0" VerticalAlignment="Top" Width="74" Click="DMSendButton_Click" FontFamily="Consolas" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="OpenFile" Content="OPEN FILE" HorizontalAlignment="Left" Margin="1027,657,0,0" VerticalAlignment="Top" Width="106" Click="OpenFile_Click" Height="40" FontFamily="Consolas" FontWeight="Bold" FontSize="16"/>
+
+        <Image x:Name="SharedImage" HorizontalAlignment="Left" Height="122" Margin="797,530,0,0" VerticalAlignment="Top" Width="154"/>
+    </Grid>
+</UserControl>
